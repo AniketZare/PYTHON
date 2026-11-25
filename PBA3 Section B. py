@@ -1,0 +1,11 @@
+
+# Question 3:
+# Create a Python script to read a text file and display
+# only those lines that contain a specified keyword.
+
+keyword = input("Enter keyword: ")
+
+with open("input.txt", "r") as file:
+    for line in file:
+        if keyword in line:
+            print(line, end="")
