@@ -1,0 +1,5 @@
+
+Python is easy to learn.
+Java is also popular.
+Python supports file handling.
+C is a programming language.
