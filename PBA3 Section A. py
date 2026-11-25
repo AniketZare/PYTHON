@@ -1,0 +1,28 @@
+# Question 2:
+# Implement the Coin Change Problem using Dynamic Programming
+# to determine the minimum number of coins required to make
+# a given amount.
+
+def coin_change(coins, amount):
+    dp = [float('inf')] * (amount + 1)
+
+    dp[0] = 0
+
+    for i in range(1, amount + 1):
+        for coin in coins:
+            if i >= coin:
+                dp[i] = min(dp[i], 1 + dp[i - coin])
+
+    if dp[amount] == float('inf'):
+        return -1
+
+    return dp[amount]
+
+
+# Example
+coins = [1, 2, 5]
+amount = 11
+
+result = coin_change(coins, amount)
+
+print("Minimum coins required:", result)
